@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de clientes</title>
+    <link rel="stylesheet" href="styles/css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__title">Información Clientes</div>
+    </header>
+
+    <div class="first-container">
+        <div class="form__container">
+            <form action="" method="post" class="form__form">
+                <label for="nombre" class="form__label">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="form__input form__name" placeholder="Ingresa tu nombre"
+                    required>
+                <br>
+    
+                <label for="apellido" class="form__label">Apellido</label>
+                <input type="text" id="apellido" name="apellido" class="form__input form__lastname"
+                    placeholder="Ingresa tu apellido" required>
+                <br>
+    
+                <label for="edad" class="form__label">Edad</label>
+                <input type="number" id="edad" name="edad" class="form__input form__age" min="1" max="120"
+                    placeholder="Ingresa tu edad" required>
+                <br>
+    
+                <label for="fecha_nacimiento" class="form__label">Fecha de Nacimiento</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form__input form__birth" required>
+                <br>
+    
+                <input type="submit" value="Guardar" id="saveData" class="form__submit">
+                <span class="form__error"></span>
+                <span class="form__success">Los datos se guardaron correctamente.</span>
+            </form>
+        </div>
+    
+        <div class="clients-general-data" id="clients-general-data">
+        </div>
+    </div>
+
+    <div class="data-clients">
+        <button id="clientsData">Ver lista de clientes</button>
+        <div class="data-clients__container" id="data-clients__container"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/getClients.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
